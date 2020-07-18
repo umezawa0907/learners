@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { Typography, Container, Box, Paper, Grid } from '@material-ui/core';
 import MainVisual from "../components/organisms/MainVisual"
 import Features from '../components/organisms/Features';
+import CardSingleColumn from '../components/organisms/CardSingleColumn';
+import CardTwoColumn from '../components/organisms/CardTwoColumn';
 
 export default function Home() {
   return (
@@ -9,46 +11,11 @@ export default function Home() {
       <MainVisual />
       <Features />
       <div>
-        <Paper>
-          <Box m={1} p={10}>
-            <Grid container>
-              <Grid item xs>
-              </Grid>
-              <Grid item xs>
-                <Typography variant="h4" component="h2">
-                  あなたに合ったレッスンがきっと見つかる
-                </Typography>
-                <Typography component="p">全15コース・79レッスン</Typography>
-              </Grid>
-            </Grid>
-          </Box>
-        </Paper>
-        <Grid container spacing={2}>
-          <Grid item xs>
-            <Paper>
-              <Box textAlign="center" m={1} p={10}>
-                <Typography variant="h4" component="h2">
-                  無料会員
-              </Typography>
-                <Typography component="p">
-                  マーケティングに触れ「基礎」を身につける
-              </Typography>
-              </Box>
-            </Paper>
-          </Grid>
-          <Grid item xs>
-            <Paper>
-              <Box textAlign="center" m={1} p={10}>
-                <Typography variant="h4" component="h2">
-                  有料会員
-              </Typography>
-                <Typography component="p">
-                  学習コミュニティへの参加
-              </Typography>
-              </Box>
-            </Paper>
-          </Grid>
-        </Grid>
+        <CardSingleColumn
+          title="あなたに合ったレッスンがきっと見つかる"
+          description="全15コース・79レッスン"
+        />
+        <CardTwoColumn />
         <Paper>
           <Box textAlign="center" m={1} p={10}>
             <Typography variant="h4" component="h2">

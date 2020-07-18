@@ -1,5 +1,4 @@
 import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import Link from 'next/link'
 import { makeStyles } from "@material-ui/core/styles"
 import { Box, Typography, Button } from "@material-ui/core"
 import CtaButton from "../atoms/CtaButton"

@@ -1,51 +1,13 @@
 import Link from 'next/link'
-import MainVisual from "../components/organisms/MainVisual"
 import { Typography, Container, Box, Paper, Grid } from '@material-ui/core';
+import MainVisual from "../components/organisms/MainVisual"
+import Features from '../components/organisms/Features';
 
 export default function Home() {
   return (
     <Container maxWidth="lg">
       <MainVisual />
-      <div>
-        <Typography variant="h3" component="h2">
-          <Box textAlign="center" m={4}>
-            初心者から、売れる人に
-          </Box>
-        </Typography>
-        <Box textAlign="center" m={1}>
-          <Typography variant="h4" component="h3">
-            <Box m={4}>
-              イラスト中心のスライドで学ぶ
-            </Box>
-          </Typography>
-          <Typography component="p">
-            紙の本よりも直感的で、動画より学びやすい、「スライド学習」を採用しました。<br />
-              自分のペースで学習できること、復習しやすいことが強みです。
-          </Typography>
-        </Box>
-        <Box textAlign="center" m={1}>
-          <Typography variant="h4" component="h3">
-            <Box m={4}>
-              すぐに確認
-            </Box>
-          </Typography>
-          <Typography component="p">
-            確認テストを挟みながら学ぶから、使えるスキルが身につきます。<br />
-            ブラウザ上でテストを行って結果を確認。マーケティングの知識が身についているか確認できます。
-          </Typography>
-        </Box>
-        <Box textAlign="center" m={1}>
-          <Typography variant="h4" component="h3">
-            <Box m={4}>
-              道のりに沿って学ぶ
-            </Box>
-          </Typography>
-          <Typography component="p">
-            「売れる人」になるために必要なレッスンを最適な順番で学ぶことができます。<br />
-            最終的には自分自身でプロダクトを企画して、目標に向かって自ら走りきる能力が身につきます。
-          </Typography>
-        </Box>
-      </div>
+      <Features />
       <div>
         <Paper>
           <Box m={1} p={10}>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import MainVisual from "../components/MainVisual"
+import MainVisual from "../components/organisms/MainVisual"
 import { Typography, Container, Box, Paper, Grid } from '@material-ui/core';
 
 export default function Home() {

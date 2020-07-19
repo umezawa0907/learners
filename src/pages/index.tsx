@@ -4,6 +4,7 @@ import MainVisual from "../components/organisms/MainVisual"
 import Features from '../components/organisms/Features';
 import CardSingleColumn from '../components/organisms/CardSingleColumn';
 import CardTwoColumn from '../components/organisms/CardTwoColumn';
+import Message from "../components/organisms/Message"
 
 export default function Home() {
   return (
@@ -16,20 +17,13 @@ export default function Home() {
           description="全15コース・79レッスン"
         />
         <CardTwoColumn />
-        <Paper>
-          <Box textAlign="center" m={1} p={10}>
-            <Typography variant="h4" component="h2">
-              初心者から売れる人を生み出す
-          </Typography>
-            <Typography component="p">
-              初心者でも独学でも、実践的な知識が学べること。<br />
-              そして、本物のスキルが身につき「売れる」ようになること。<br /><br />
-              プログラミングで夢を叶えたい人が、本当に夢を叶えられるように、<br />
-              私たちはこんな思いをlearnersに込めています。<br /><br />
-              マーケティングの世界へ踏み出すあなたを、私たちがサポートします。
-          </Typography>
-          </Box>
-        </Paper>
+        <Message>
+          初心者でも独学でも、実践的な知識が学べること。<br />
+          そして、本物のスキルが身につき「売れる」ようになること。<br /><br />
+          プログラミングで夢を叶えたい人が、本当に夢を叶えられるように、<br />
+          私たちはこんな思いをlearnersに込めています。<br /><br />
+          マーケティングの世界へ踏み出すあなたを、私たちがサポートします。
+          </Message>
       </div>
       <div>
         <Paper>

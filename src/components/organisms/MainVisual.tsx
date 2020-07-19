@@ -26,7 +26,7 @@ export default function MainVisual() {
   } = useStyle();
   return (
     <Box className={root}>
-      <Typography className={catchcopy} variant="h3" component="h1">
+      <Typography className={catchcopy} color="primary" variant="h3" component="h1">
         マーケティング学ぶなら<br />Learners
       </Typography>
       <CtaButton />

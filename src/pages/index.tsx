@@ -7,6 +7,7 @@ import CardSingleColumn from '../components/organisms/CardSingleColumn'
 import Price from '../components/organisms/Price'
 import Message from "../components/organisms/Message"
 import CtaSection from "../components/organisms/CtaSection"
+import Footer from "../components/organisms/Footer"
 import { ThemeProvider } from "@material-ui/styles"
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
@@ -47,8 +48,9 @@ export default function Home() {
           マーケティングの世界へ踏み出すあなたを、私たちがサポートします。
           </Message>
         </div>
-        <CtaSection />
       </Container >
+      <CtaSection />
+      <Footer />
     </ThemeProvider>
   )
 }

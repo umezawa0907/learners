@@ -29,7 +29,7 @@ export default function Features() {
       <Typography className={descriptionStyle} variant="body1">
         １分後、マーケティングの世界でお会いしましょう。
       </Typography>
-      <CtaButton />
+      <CtaButton>無料会員登録</CtaButton>
     </Box>
   )
 }

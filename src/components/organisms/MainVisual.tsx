@@ -14,7 +14,8 @@ const useStyle = makeStyles((theme: Theme) => ({
   },
   catchcopy: {
     letterSpacing: "0.1em",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    marginBottom: theme.spacing(2)
   }
 }));
 
@@ -29,7 +30,7 @@ export default function MainVisual({ children }) {
       <Typography className={catchcopy} color="primary" variant="h3" component="h1">
         {children}
       </Typography>
-      <CtaButton />
+      <CtaButton>今すぐ始める</CtaButton>
     </Box>
   )
 }

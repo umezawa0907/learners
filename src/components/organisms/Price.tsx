@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme: Theme) => ({
   }
 }));
 
-export default function CardOneColumn({ title, description }) {
+export default function CardOneColumn() {
   const { cardLeft, cardRight, cardContent, titleStyle } = useStyle();
   return (
     <Box>

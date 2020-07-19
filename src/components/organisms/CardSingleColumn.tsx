@@ -8,9 +8,7 @@ const useStyle = makeStyles((theme: Theme) => ({
     marginBottom: theme.spacing(4)
   },
   textArea: {
-    paddingRight: theme.spacing(10),
-    paddingTop: theme.spacing(12),
-    paddingBottom: theme.spacing(12)
+    padding: theme.spacing(10)
   },
   titleStyle: {
     fontWeight: "bold",
@@ -24,9 +22,9 @@ export default function CardOneColumn({ title, description }) {
   return (
     <Box className={root}>
       <Grid container spacing={4}>
-        <Grid item xs>
+        <Grid item sm={12} md={5}>
         </Grid>
-        <Grid item xs>
+        <Grid item sm={12} md={7}>
           <Box className={textArea} >
             <Typography className={titleStyle} color="primary" variant="h4" component="h2">
               {title}

@@ -18,7 +18,7 @@ const useStyle = makeStyles((theme: Theme) => ({
   }
 }));
 
-export default function MainVisual() {
+export default function MainVisual({ children }) {
   const {
     root,
     catchcopy,
@@ -27,7 +27,7 @@ export default function MainVisual() {
   return (
     <Box className={root}>
       <Typography className={catchcopy} color="primary" variant="h3" component="h1">
-        マーケティング学ぶなら<br />Learners
+        {children}
       </Typography>
       <CtaButton />
     </Box>

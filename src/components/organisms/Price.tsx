@@ -5,10 +5,12 @@ import { Box, Typography, Grid } from "@material-ui/core"
 const useStyle = makeStyles((theme: Theme) => ({
   cardLeft: {
     height: "100%",
+    width: "100%",
     backgroundColor: "#f0f4f9"
   },
   cardRight: {
     height: "100%",
+    width: "100%",
     backgroundColor: "#f7edad"
   },
   textArea: {
@@ -25,7 +27,7 @@ export default function CardOneColumn({ title, description }) {
   return (
     <Box>
       <Grid container spacing={4}>
-        <Grid item xs>
+        <Grid item xs={12} sm={6}>
           <Box className={cardLeft}>
             <Box textAlign="center" p={10}>
               <Typography className={titleStyle} color="primary" variant="h5" component="h2">
@@ -37,7 +39,7 @@ export default function CardOneColumn({ title, description }) {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={12} sm={6}>
           <Box className={cardRight}>
             <Box textAlign="center" p={10}>
               <Typography className={titleStyle} color="primary" variant="h5" component="h2">

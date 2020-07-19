@@ -28,7 +28,7 @@ export default function CardOneColumn({ title, description }) {
         <Grid item xs>
           <Box className={cardLeft}>
             <Box textAlign="center" p={10}>
-              <Typography className={titleStyle} variant="h4" component="h2">
+              <Typography className={titleStyle} color="primary" variant="h5" component="h2">
                 無料会員
               </Typography>
               <Typography component="p">
@@ -40,7 +40,7 @@ export default function CardOneColumn({ title, description }) {
         <Grid item xs>
           <Box className={cardRight}>
             <Box textAlign="center" p={10}>
-              <Typography className={titleStyle} variant="h4" component="h2">
+              <Typography className={titleStyle} color="primary" variant="h5" component="h2">
                 有料会員
               </Typography>
               <Typography component="p">

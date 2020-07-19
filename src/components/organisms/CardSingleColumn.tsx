@@ -28,7 +28,7 @@ export default function CardOneColumn({ title, description }) {
         </Grid>
         <Grid item xs>
           <Box className={textArea} >
-            <Typography className={titleStyle} variant="h4" component="h2">
+            <Typography className={titleStyle} color="primary" variant="h4" component="h2">
               {title}
             </Typography>
             <Typography variant="body1" component="p">

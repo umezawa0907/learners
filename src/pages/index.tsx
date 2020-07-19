@@ -5,6 +5,7 @@ import Features from '../components/organisms/Features';
 import CardSingleColumn from '../components/organisms/CardSingleColumn';
 import CardTwoColumn from '../components/organisms/CardTwoColumn';
 import Message from "../components/organisms/Message"
+import CtaSection from "../components/organisms/CtaSection"
 
 export default function Home() {
   return (
@@ -25,17 +26,7 @@ export default function Home() {
           マーケティングの世界へ踏み出すあなたを、私たちがサポートします。
           </Message>
       </div>
-      <div>
-        <Paper>
-          <Box textAlign="center" m={1} p={10}>
-            <Typography variant="h4" component="h2">
-              さっそく始めよう
-          </Typography>
-            <Typography component="p">１分後、マーケティングの世界でお会いしましょう。</Typography>
-            <Link href="/about"><a>無料会員登録</a></Link>
-          </Box>
-        </Paper>
-      </div>
+      <CtaSection />
     </Container >
   )
 }

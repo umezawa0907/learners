@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Typography, Container, Box, Paper, Grid } from '@material-ui/core'
+import { NextPage } from "next";
+import { Container } from '@material-ui/core'
 import Header from "../components/organisms/Header"
 import MainVisual from "../components/organisms/MainVisual"
 import Features from '../components/organisms/Features'
@@ -8,15 +8,10 @@ import Price from '../components/organisms/Price'
 import Message from "../components/organisms/Message"
 import CtaSection from "../components/organisms/CtaSection"
 import Footer from "../components/organisms/Footer"
-import { ThemeProvider } from "@material-ui/styles"
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
-let theme = createMuiTheme();
-theme = responsiveFontSizes(theme);
-
-export default function Home() {
+const Page: NextPage = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <Header />
       <Container maxWidth="lg">
         <MainVisual>
@@ -51,6 +46,8 @@ export default function Home() {
       </Container >
       <CtaSection />
       <Footer />
-    </ThemeProvider>
+    </>
   )
 }
+
+export default Page;

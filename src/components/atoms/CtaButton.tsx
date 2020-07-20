@@ -4,7 +4,7 @@ import { Box, Typography, Button } from "@material-ui/core"
 export default function CtaButton({ children }) {
   return (
     <Box>
-      <Link href="/about">
+      <Link href="/signup">
         <Button
           color="primary"
           size="large"

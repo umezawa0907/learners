@@ -1,8 +1,8 @@
-import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import { makeStyles } from "@material-ui/core/styles"
-import { Box, Typography, Grid } from "@material-ui/core"
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Typography, Grid } from '@material-ui/core'
 
-const useStyle = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   cardLeft: {
     height: "100%",
     backgroundColor: "#f0f4f9",
@@ -11,25 +11,21 @@ const useStyle = makeStyles((theme: Theme) => ({
     height: "100%",
     backgroundColor: "#f7edad"
   },
-  cardContent: {
-    padding: theme.spacing(10),
-
-  },
   titleStyle: {
     fontWeight: "bold",
     marginBottom: theme.spacing(2)
   }
 }));
 
-export default function CardOneColumn() {
-  const { cardLeft, cardRight, cardContent, titleStyle } = useStyle();
+const CardOneColumn: React.FC = () => {
+  const classes = useStyles();
   return (
     <Box>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={6}>
-          <Box className={cardLeft}>
+          <Box className={classes.cardLeft}>
             <Box textAlign="center" p={10}>
-              <Typography className={titleStyle} color="primary" variant="h5" component="h2">
+              <Typography className={classes.titleStyle} color="primary" variant="h5" component="h2">
                 無料会員
               </Typography>
               <Typography component="p">
@@ -39,9 +35,9 @@ export default function CardOneColumn() {
           </Box>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Box className={cardRight}>
+          <Box className={classes.cardRight}>
             <Box textAlign="center" p={10}>
-              <Typography className={titleStyle} color="primary" variant="h5" component="h2">
+              <Typography className={classes.titleStyle} color="primary" variant="h5" component="h2">
                 有料会員
               </Typography>
               <Typography component="p">
@@ -54,3 +50,5 @@ export default function CardOneColumn() {
     </Box>
   )
 }
+
+export default CardOneColumn;

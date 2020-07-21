@@ -1,7 +1,12 @@
-import Link from "next/link"
-import { Box, Typography, Button } from "@material-ui/core"
+import * as React from 'react'
+import Link from 'next/link'
+import { Box, Button } from '@material-ui/core'
 
-export default function CtaButton({ children }) {
+export interface CtaButtonProps {
+  children: React.ReactNode;
+}
+
+const CtaButton: React.FC<CtaButtonProps> = props => {
   return (
     <Box>
       <Link href="/signup">
@@ -10,9 +15,11 @@ export default function CtaButton({ children }) {
           size="large"
           variant="contained"
         >
-          {children}
+          {props.children}
         </Button>
       </Link>
     </Box>
   )
 }
+
+export default CtaButton;

@@ -1,6 +1,6 @@
-import { NextPage } from "next";
+import { NextPage } from 'next'
 
-const Page: NextPage = () => {
+const Dashboard: NextPage = () => {
   return (
     <>
       <h1>dashboard</h1>
@@ -8,4 +8,4 @@ const Page: NextPage = () => {
   )
 }
 
-export default Page;
+export default Dashboard;

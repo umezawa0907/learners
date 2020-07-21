@@ -1,40 +1,44 @@
-import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import { makeStyles } from "@material-ui/core/styles"
-import { Box } from "@material-ui/core"
-import SectionHeading from "../atoms/SectionHeading"
-import SectionCard from "../molecules/SectionCard"
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box } from '@material-ui/core'
+import SectionHeading from '../atoms/SectionHeading'
+import SectionCard from '../molecules/SectionCard'
 
-const useStyle = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: theme.spacing(10)
   }
 }));
 
-export default function Features({
-  heading,
-  firsttitle,
-  firstdescription,
-  secondtitle,
-  seconddescription,
-  thirdtitle,
-  thirddescription
-}) {
-  const { root } = useStyle();
+export interface FeaturesProps {
+  heading: string;
+  firsttitle: string;
+  firstdescription: string;
+  secondtitle: string;
+  seconddescription: string;
+  thirdtitle: string;
+  thirddescription: string;
+}
+
+const Features: React.FC<FeaturesProps> = props => {
+  const classes = useStyles();
   return (
-    <Box className={root}>
-      <SectionHeading tag="h2" >{heading}</SectionHeading>
+    <Box className={classes.root}>
+      <SectionHeading tag="h2" >{props.heading}</SectionHeading>
       <SectionCard
-        title={firsttitle}
-        description={firstdescription}
+        title={props.firsttitle}
+        description={props.firstdescription}
       />
       <SectionCard
-        title={secondtitle}
-        description={seconddescription}
+        title={props.secondtitle}
+        description={props.seconddescription}
       />
       <SectionCard
-        title={thirdtitle}
-        description={thirddescription}
+        title={props.thirdtitle}
+        description={props.thirddescription}
       />
     </Box>
   )
 }
+
+export default Features;

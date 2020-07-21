@@ -1,10 +1,7 @@
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
 import CtaButton from '../atoms/CtaButton'
 
 const useStyles = makeStyles((theme) => ({
@@ -14,13 +11,13 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
+  titleStyle: {
     flexGrow: 1,
     fontWeight: "bold"
-  },
+  }
 }));
 
-export default function ButtonAppBar() {
+const ButtonAppBar: React.FC = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -29,12 +26,14 @@ export default function ButtonAppBar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography color="primary" variant="h6" className={classes.title}>
+          <Typography color="primary" variant="h6" className={classes.titleStyle}>
             Learners
           </Typography>
           <CtaButton>無料会員登録</CtaButton>
         </Toolbar>
       </AppBar>
     </div>
-  );
+  )
 }
+
+export default ButtonAppBar;

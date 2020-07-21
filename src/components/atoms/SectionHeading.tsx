@@ -1,23 +1,30 @@
-import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import { makeStyles } from "@material-ui/core/styles"
-import { Box, Typography } from "@material-ui/core"
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Typography } from '@material-ui/core'
 
-const useStyle = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   heading: {
     fontWeight: "bold",
     marginBottom: theme.spacing(8)
   }
 }));
 
-export default function SectionHeading({ children, tag }) {
-  const { heading } = useStyle();
+export interface SectionHeadingProps {
+  children: React.ReactNode;
+  tag: React.ElementType;
+}
+
+const SectionHeading: React.FC<SectionHeadingProps> = props => {
+  const classes = useStyles();
   return (
     <>
-      <Typography className={heading} color="primary" variant="h3" component={tag}>
+      <Typography className={classes.heading} color="primary" variant="h3" component={props.tag}>
         <Box textAlign="center">
-          {children}
+          {props.children}
         </Box>
       </Typography>
     </>
   )
 }
+
+export default SectionHeading;

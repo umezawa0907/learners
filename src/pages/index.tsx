@@ -1,15 +1,15 @@
-import { NextPage } from "next";
+import { NextPage } from 'next'
 import { Container } from '@material-ui/core'
-import Header from "../components/organisms/Header"
-import MainVisual from "../components/organisms/MainVisual"
+import Header from '../components/organisms/Header'
+import MainVisual from '../components/organisms/MainVisual'
 import Features from '../components/organisms/Features'
 import CardSingleColumn from '../components/organisms/CardSingleColumn'
 import Price from '../components/organisms/Price'
-import Message from "../components/organisms/Message"
-import CtaSection from "../components/organisms/CtaSection"
-import Footer from "../components/organisms/Footer"
+import Message from '../components/organisms/Message'
+import CtaSection from '../components/organisms/CtaSection'
+import Footer from '../components/organisms/Footer'
 
-const Page: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Header />
@@ -50,4 +50,4 @@ const Page: NextPage = () => {
   )
 }
 
-export default Page;
+export default Home;

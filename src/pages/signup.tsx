@@ -1,6 +1,7 @@
-import Link from "next/link"
+import { NextPage } from 'next'
+import Link from 'next/link'
 
-export default function About() {
+const Signup: NextPage = () => {
     return (
         <>
             <Link href="/"><a>Home</a></Link>
@@ -8,3 +9,5 @@ export default function About() {
         </>
     )
 }
+
+export default Signup;

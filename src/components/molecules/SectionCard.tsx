@@ -1,8 +1,8 @@
-import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import { makeStyles } from "@material-ui/core/styles"
-import { Box, Typography, Container } from "@material-ui/core"
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Typography, Container } from '@material-ui/core'
 
-const useStyle = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   contain: {
     objectFit: "contain",
     maxWidth: "100%"
@@ -18,19 +18,26 @@ const useStyle = makeStyles((theme: Theme) => ({
   }
 }));
 
-export default function SectionCard({ title, description }) {
-  const { contain, titleStyle, descriptionStyle } = useStyle();
+export interface SectionCardProps {
+  title: string;
+  description: string;
+}
+
+const SectionCard: React.FC<SectionCardProps> = props => {
+  const classes = useStyles();
   return (
     <Box textAlign="center">
-      <img className={contain} src="/slide_image.jpg" />
-      <Typography className={titleStyle} color="primary" variant="h5" component="h3">
-        {title}
+      <img className={classes.contain} src="/slide_image.jpg" />
+      <Typography className={classes.titleStyle} color="primary" variant="h5" component="h3">
+        {props.title}
       </Typography>
       <Container maxWidth="sm">
-        <Typography className={descriptionStyle} color="textPrimary" component="p">
-          {description}
+        <Typography className={classes.descriptionStyle} color="textPrimary" component="p">
+          {props.description}
         </Typography>
       </Container>
     </Box>
   )
 }
+
+export default SectionCard;

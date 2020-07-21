@@ -1,9 +1,9 @@
-import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import { makeStyles } from "@material-ui/core/styles"
-import { Box, Typography, Button } from "@material-ui/core"
-import CtaButton from "../atoms/CtaButton"
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Typography } from '@material-ui/core'
+import CtaButton from '../atoms/CtaButton'
 
-const useStyle = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     height: theme.typography.pxToRem(660),
     textAlign: "center",
@@ -19,18 +19,20 @@ const useStyle = makeStyles((theme: Theme) => ({
   }
 }));
 
-export default function MainVisual({ children }) {
-  const {
-    root,
-    catchcopy,
-    ...classes
-  } = useStyle();
+export interface MainVisualProps {
+  children: React.ReactNode;
+}
+
+const MainVisual: React.FC<MainVisualProps> = props => {
+  const classes = useStyles();
   return (
-    <Box className={root}>
-      <Typography className={catchcopy} color="primary" variant="h3" component="h1">
-        {children}
+    <Box className={classes.root}>
+      <Typography className={classes.catchcopy} color="primary" variant="h3" component="h1">
+        {props.children}
       </Typography>
       <CtaButton>今すぐ始める</CtaButton>
     </Box>
   )
 }
+
+export default MainVisual;

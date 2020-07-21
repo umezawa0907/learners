@@ -1,8 +1,8 @@
-import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import { makeStyles } from "@material-ui/core/styles"
-import { Box, Typography } from "@material-ui/core"
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Typography } from '@material-ui/core'
 
-const useStyle = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(10),
     paddingTop: theme.spacing(20),
@@ -14,16 +14,22 @@ const useStyle = makeStyles((theme: Theme) => ({
   }
 }))
 
-export default function Message({ children }) {
-  const { root, titleStyle } = useStyle();
+export interface MessageProps {
+  children: React.ReactNode;
+}
+
+const Message: React.FC<MessageProps> = props => {
+  const classes = useStyles();
   return (
-    <Box className={root} textAlign="center">
-      <Typography className={titleStyle} color="primary" variant="h5" component="h2">
+    <Box className={classes.root} textAlign="center">
+      <Typography className={classes.titleStyle} color="primary" variant="h5" component="h2">
         初心者から、マーケターを生み出す
       </Typography>
       <Typography>
-        {children}
+        {props.children}
       </Typography>
     </Box>
   )
 }
+
+export default Message;

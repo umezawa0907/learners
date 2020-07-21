@@ -1,8 +1,8 @@
-import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import { makeStyles } from "@material-ui/core/styles"
-import { Box, Typography, Grid } from "@material-ui/core"
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Typography, Grid } from '@material-ui/core'
 
-const useStyle = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#f0f4f9",
     marginBottom: theme.spacing(4)
@@ -17,20 +17,25 @@ const useStyle = makeStyles((theme: Theme) => ({
   }
 }));
 
-export default function CardOneColumn({ title, description }) {
-  const { root, textArea, titleStyle } = useStyle();
+export interface CardOneColumnProps {
+  title: string;
+  description: string;
+}
+
+const CardOneColumn: React.FC<CardOneColumnProps> = props => {
+  const classes = useStyles();
   return (
-    <Box className={root}>
+    <Box className={classes.root}>
       <Grid container spacing={4}>
         <Grid item sm={12} md={5}>
         </Grid>
         <Grid item sm={12} md={7}>
-          <Box className={textArea} >
-            <Typography className={titleStyle} color="primary" variant="h4" component="h2">
-              {title}
+          <Box className={classes.textArea} >
+            <Typography className={classes.titleStyle} color="primary" variant="h4" component="h2">
+              {props.title}
             </Typography>
             <Typography variant="body1" component="p">
-              {description}
+              {props.description}
             </Typography>
           </Box>
         </Grid>
@@ -38,3 +43,5 @@ export default function CardOneColumn({ title, description }) {
     </Box>
   )
 }
+
+export default CardOneColumn;

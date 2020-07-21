@@ -1,10 +1,12 @@
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container'
+import * as React from 'react'
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Container
+} from '@material-ui/core'
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
     <AppBar position="static" color="primary">
       <Container maxWidth="md">
@@ -17,3 +19,5 @@ export default function Footer() {
     </AppBar>
   )
 }
+
+export default Footer;

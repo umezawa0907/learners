@@ -1,9 +1,9 @@
-import { Theme } from "@material-ui/core/styles/createMuiTheme"
-import { makeStyles } from "@material-ui/core/styles"
-import { Box, Typography } from "@material-ui/core"
-import CtaButton from "../atoms/CtaButton"
+import * as React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Typography } from '@material-ui/core'
+import CtaButton from '../atoms/CtaButton'
 
-const useStyle = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(15),
     paddingBottom: theme.spacing(15),
@@ -19,17 +19,19 @@ const useStyle = makeStyles((theme: Theme) => ({
   }
 }));
 
-export default function Features() {
-  const { root, titleStyle, descriptionStyle } = useStyle();
+const CtaSection: React.FC = () => {
+  const classes = useStyles();
   return (
-    <Box className={root} textAlign="center">
-      <Typography className={titleStyle} color="primary" variant="h5" component="h2">
+    <Box className={classes.root} textAlign="center">
+      <Typography className={classes.titleStyle} color="primary" variant="h5" component="h2">
         さっそく始めよう
       </Typography>
-      <Typography className={descriptionStyle} variant="body1">
+      <Typography className={classes.descriptionStyle} variant="body1">
         １分後、マーケティングの世界でお会いしましょう。
       </Typography>
       <CtaButton>無料会員登録</CtaButton>
     </Box>
   )
 }
+
+export default CtaSection;
